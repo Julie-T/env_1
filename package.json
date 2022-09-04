@@ -7,7 +7,7 @@
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint .",
-    "test": "jest --transformIgnorePatterns \"node_modules/(?!webpack5)/\"",
+    "test": "jest --transformIgnorePatterns \"node_modules/(?!webpack5)/\" --env=jsdom",
     "coverage": "jest --coverage",
     "doc": "jsdoc -c jsdoc.conf.json",
     "preshow:coverage": "npm run coverage",
@@ -46,5 +46,7 @@
     "webpack-dev-server": "^3.11.1",
     "webpack-merge": "^5.8.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jest-environment-jsdom": "^29.0.2"
+  }
 }
